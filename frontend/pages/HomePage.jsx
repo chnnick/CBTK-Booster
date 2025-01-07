@@ -5,19 +5,22 @@ import "./HomePageStyles.css";
 
 export const HomePage = () => {
 
-  const [newUser, setUser] = useState('');
+  const [newUser, setUser] = useState({
+    email: ""
+  });
   const { createUser } = useSite();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-
+    console.log("SUBMITTED!");
+    console.log("Email = " + newUser.email);
     const { success, message } = createUser(newUser);
     console.log("Success:", success);
     console.log("Message:", message);
     if (success) {
       navigate("/joined");
     } else {
-      alert("Failed to add user: ", message);
+      console.log("ERROR!");
     }
   }
 
@@ -53,15 +56,16 @@ export const HomePage = () => {
       <div id="header">
         <span id="typewriter">{typewriterText}</span><span id="cursor">|</span>
       </div>
-      <div id="ig-handler">
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="userEmail">email:</label>
+      <div id="email-handler">
+        <form id="email-form">
+          <label htmlFor="user-email">email:</label>
           <input 
+            id="user-email"
             type="text" 
-            value={userEmail}
+            value={newUser.email}
             onChange={(e) => setUser({ ...newUser, email: e.target.value})}
             />
-          <button type="submit">get notified</button>
+          <button onClick={handleSubmit}>get notified</button>
         </form>
       </div>
       <div id="footer">

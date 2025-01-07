@@ -7,7 +7,7 @@ export const useSite = create((set) => ({
     if (!newUser.email) {
       return {success:false, message:"Please fill in email!"};
     }
-    const res = await fetch("/api", {
+    const res = await fetch("/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
