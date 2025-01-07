@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Montserrat Font import */
+
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+
+  /* font */
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  /* styles */
+  --bg-color: #020a06;
+  --cursor-color: #cfcfaf;
+  --typewriter-font-size: 12vw;
+  --reg-font-size: 3vw;
+
+  background: var(--bg-color);
+}
+
+#header {
+  width: 80vw;
+  max-width: 80vw;
+  min-width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#typewriter, #cursor {
+  font-size: var(--typewriter-font-size);
+  line-height: var(--typewriter-font-size);
+}
+
+#typewriter {
+  text-align: center;
+}
+
+#cursor {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+}
+
+#email-handler {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+label {
+  text-align: center;
+  font-size: 3vh;
+  line-height: 4vh;
+}
+
+button, input, input:focus {
+  outline: none;
+  color: var(--bg-color);
+  background-color: var(--cursor-color);
+  height: 4vh;
+  font-size: 3vh;
+  line-height: 0vh;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 0px;
+}
+
+input {
+  padding-left: .5vw;
+}
+
+button:hover {
+  background-color: #aca;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.footer > p {
+  text-align: center;
+  font-size: 12vw;
+}
+
+#link-home {
+  color: var(--cursor-color);
+}
+
+#link-home:hover {
+  color: #aca;
+}
+
+@media (max-width: 400px) {
+
+  button {
+    text-wrap: wrap;
+    height: 8vh;
+    line-height: 3vh;
+  }
+  
+}
