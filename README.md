@@ -1,4 +1,4 @@
-##Site for CutByTheKid
+## Site for CutByTheKid
 Built using React, ExpressJS, MongoDB, and NodeJS
 
 In progress site in lieu of incoming shopify site.
