@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import JoinSuccessPage from "../pages/JoinSuccessPage";
 
@@ -9,6 +9,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/joined" element={<JoinSuccessPage />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
     </>
   )

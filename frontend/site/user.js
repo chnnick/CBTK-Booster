@@ -16,6 +16,6 @@ export const useSite = create((set) => ({
     })
     const data = await res.json;
     set((state) => ({users: [...state.users, data.data] }));
-    return {success:false, message:"Created user successfully!"};
+    return {success:true, message:"Created user successfully!"};
   }
 }));

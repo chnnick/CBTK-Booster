@@ -13,17 +13,34 @@ export const HomePage = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    console.log("SUBMITTED!");
-    console.log("Email = " + newUser.email);
-    const { success, message } = createUser(newUser);
-    console.log("Success:", success);
-    console.log("Message:", message);
+    e.preventDefault();
+
+    const isEmail = await checkEmail(newUser.email);
+    if (!isEmail) {
+      alert("Please enter a valid email address."); 
+      return;
+    }
+
+    const { success, message } = await createUser(newUser);
+    
     if (success) {
-      console.log("SUCCESS!");
+      console.log("SUCCESS IN CREATING USER!");
       navigate("/joined");
     } else {
-      console.log("ERROR!");
+      console.log("ERROR IN CREATING USER!");
     }
+  }
+  
+  // taken from stack overflow https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript
+  const checkEmail = (email) => { 
+    console.log("checked email" + email);
+    const isEmail = String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+    console.log(!!isEmail);
+    return !!isEmail;
   }
 
   const [typewriterText, setTypewriterText] = useState('');
@@ -60,7 +77,7 @@ export const HomePage = () => {
       </div>
       <div id="email-handler">
         <form id="email-form">
-          <label htmlFor="user-email">email:</label>
+          <label htmlFor="user-email">your email:</label>
           <input 
             id="user-email"
             type="text" 

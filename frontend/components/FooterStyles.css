@@ -7,7 +7,7 @@
 #footer > p {
   text-align: center;
   margin: 0;
-  font-size: 2vw;
+  font-size: max(3vw, 3vh);
   margin: none;
 }
 
