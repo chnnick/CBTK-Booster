@@ -1,0 +1,21 @@
+#footer {
+  display: flex;
+  flex-direction: column;
+  color: var(--cursor-color);
+}
+
+#footer > p {
+  text-align: center;
+  margin: 0;
+  font-size: 2vw;
+  margin: none;
+}
+
+#link-home {
+  text-decoration: none;
+  color: var(--cursor-color);
+}
+
+#link-home:hover {
+  color: #aca;
+}

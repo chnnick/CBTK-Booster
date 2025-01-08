@@ -1,6 +1,12 @@
-* {
+body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+
+#root {
+  margin: 0;
+  padding: 5vh 0;
   box-sizing: border-box;
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
@@ -8,14 +14,20 @@
   --bg-color: #020a06;
   --cursor-color: #cfcfaf;
   color: var(--cursor-color);
+  background: var(--bg-color);
 }
 
-body {
+#content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background: var(--bg-color);
+}
+
+#cbtk-img {
+  height: 50vh;
+  width: 50vw;
 }
 
 p {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSite } from '../site/user';
 import "./HomePageStyles.css";
+import Footer from '../components/Footer';
 
 export const HomePage = () => {
 
@@ -18,6 +19,7 @@ export const HomePage = () => {
     console.log("Success:", success);
     console.log("Message:", message);
     if (success) {
+      console.log("SUCCESS!");
       navigate("/joined");
     } else {
       console.log("ERROR!");
@@ -68,10 +70,7 @@ export const HomePage = () => {
           <button onClick={handleSubmit}>get notified</button>
         </form>
       </div>
-      <div id="footer">
-        <p>limited access</p>
-        <p><Link id="link-home" to="/">dreamcore.us</Link></p>
-      </div>
+      <Footer />
     </>
   )
 }

@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* Montserrat Font import */
 
-#root {
+body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+
+#root {
   box-sizing: border-box;
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: space-between; 
   align-items: center; 
 
   /* font */
@@ -24,6 +28,8 @@
   --reg-font-size: 3vw;
 
   background: var(--bg-color);
+  overflow: hidden;
+  padding: 5vh 0;
 }
 
 #header {
@@ -65,16 +71,15 @@ form {
 
 label {
   text-align: center;
-  font-size: 3vh;
-  line-height: 4vh;
+  font-size: 4vh;
+  line-height: 5vh;
 }
 
 button, input, input:focus {
   outline: none;
-  color: var(--bg-color);
   background-color: var(--cursor-color);
-  height: 4vh;
-  font-size: 3vh;
+  height: 5vh;
+  font-size: 4vh;
   line-height: 0vh;
   border: none;
   margin-bottom: 10px;
@@ -83,29 +88,16 @@ button, input, input:focus {
 
 input {
   padding-left: .5vw;
+  color: var(--bg-color);
+}
+
+button {
+  color: var(--bg-color);
+  background-color: #bebe9e;
 }
 
 button:hover {
   background-color: #aca;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-}
-
-.footer > p {
-  text-align: center;
-  font-size: 12vw;
-}
-
-#link-home {
-  color: var(--cursor-color);
-}
-
-#link-home:hover {
-  color: #aca;
 }
 
 @media (max-width: 400px) {
