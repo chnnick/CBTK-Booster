@@ -1,0 +1,2 @@
+<IfModule mode_rewrite.c>
+  Rewrite

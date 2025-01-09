@@ -32,6 +32,14 @@ body {
   padding: 5vh 0;
 }
 
+.normal {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.styled {
+  font-family: "Montserrat", serif;
+}
+
 #header {
   width: 80vw;
   max-width: 80vw;
@@ -78,6 +86,7 @@ label {
 button, input, input:focus {
   outline: none;
   background-color: var(--cursor-color);
+  font-family: "Montserrat", serif;
   height: 5vh;
   font-size: 4vh;
   line-height: 0vh;
@@ -93,7 +102,7 @@ input {
 
 button {
   color: var(--bg-color);
-  background-color: #bebe9e;
+  background-color: var(--cursor-color);
 }
 
 button:hover {
@@ -101,6 +110,10 @@ button:hover {
 }
 
 @media (max-width: 400px) {
+
+  #header {
+    margin-top: 30vh;
+  }
 
   button {
     text-wrap: wrap;

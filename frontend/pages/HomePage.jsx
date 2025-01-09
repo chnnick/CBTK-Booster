@@ -22,7 +22,7 @@ export const HomePage = () => {
     }
 
     const { success, message } = await createUser(newUser);
-    
+
     if (success) {
       console.log("SUCCESS IN CREATING USER!");
       navigate("/joined");
@@ -44,6 +44,7 @@ export const HomePage = () => {
   }
 
   const [typewriterText, setTypewriterText] = useState('');
+  const [typewriterStyle, setTypewriterStyle] = useState('styled');
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const toType = ["dreamcore.us", "@cutbythekid"];
@@ -52,6 +53,11 @@ export const HomePage = () => {
     let phraseIndex = 0;
     let sleepTime = 100;
     while (true) {
+      if (phraseIndex == 1) {
+        setTypewriterStyle('styled');
+      } else {
+        setTypewriterStyle('normal');
+      }
       let phrase = toType[phraseIndex];
       for (let i = 0; i <= phrase.length; i++) {
         setTypewriterText(phrase.substring(0, i));
@@ -73,7 +79,7 @@ export const HomePage = () => {
   return (
     <>
       <div id="header">
-        <span id="typewriter">{typewriterText}</span><span id="cursor">|</span>
+        <span className={typewriterStyle} id="typewriter">{typewriterText}</span><span id="cursor">|</span>
       </div>
       <div id="email-handler">
         <form id="email-form">
