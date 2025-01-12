@@ -33,3 +33,14 @@ body {
 p {
   font-size: 3vh;
 }
+
+@media (max-width: 400px) {
+
+  #cbtk-img {
+    padding-top: 20vh;
+    height: 40vh;
+    width: 70vw;
+  }
+
+  
+}
