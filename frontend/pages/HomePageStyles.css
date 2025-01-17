@@ -34,10 +34,12 @@ body {
 
 .normal {
   font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
 }
 
 .styled {
   font-family: "Montserrat", serif;
+  font-style: normal;
 }
 
 #header {
