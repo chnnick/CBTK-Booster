@@ -113,14 +113,17 @@ button:hover {
 
 @media (max-width: 400px) {
 
-  #header {
-    margin-top: 30vh;
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    justify-content: space-evenly;
   }
 
   button {
     text-wrap: wrap;
     height: 8vh;
-    line-height: 3vh;
+    line-height: 4vh;
   }
   
 }
