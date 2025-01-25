@@ -1,5 +1,7 @@
-## Code for *dreamcore.us*
+## Code for [dreamcore.us](dreamcore.us)
 ### A site for CutByTheKid
+
+When loading site, wait a couple seconds for server to start up, currently on free Render hosting plan.
 
 Built using React, ExpressJS, MongoDB, and NodeJS
 
