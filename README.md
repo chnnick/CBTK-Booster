@@ -1,4 +1,4 @@
-## Code for [dreamcore.us](dreamcore.us)
+## Code for <a href="https://dreamcore.us" target="_blank">dreamcore.us</a>
 ### A site for CutByTheKid
 
 When loading site, wait a couple seconds for server to start up, currently on free Render hosting plan.
