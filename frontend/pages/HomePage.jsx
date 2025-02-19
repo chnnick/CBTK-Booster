@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { useSite } from '../site/user';
 import "./HomePageStyles.css";
 import Footer from '../components/Footer';
@@ -78,22 +79,57 @@ export const HomePage = () => {
   
   return (
     <>
-      <div id="header">
-        <span className={typewriterStyle} id="typewriter">{typewriterText}</span><span id="cursor">|</span>
-      </div>
+      <motion.div 
+        id="header"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
+        <span className={typewriterStyle} id="typewriter">{typewriterText}</span>
+        <span id="cursor">|</span>
+      </motion.div>
+
       <div id="email-handler">
         <form id="email-form">
-          <label htmlFor="user-email">your email:</label>
-          <input 
+          <motion.label 
+            htmlFor="user-email"
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            your email:
+          </motion.label>
+          
+          <motion.input 
             id="user-email"
             type="text" 
             value={newUser.email}
             onChange={(e) => setUser({ ...newUser, email: e.target.value})}
-            />
-          <button onClick={handleSubmit}>get notified</button>
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          />
+          
+          <motion.button 
+            onClick={handleSubmit}
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            get notified
+          </motion.button>
         </form>
       </div>
-      <Footer />
+      
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+      >
+        <Footer />
+      </motion.div>
     </>
   )
 }
