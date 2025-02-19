@@ -29,8 +29,7 @@ body {
 
   background: var(--bg-color);
   overflow: hidden;
-  padding: 0;
-  min-height: 100vh; /* Ensure full viewport height */
+  padding: 5vh 0;
 }
 
 .normal {
@@ -135,13 +134,7 @@ button:hover {
   overflow: hidden; /* Ensures sliding animations don't cause scrollbars */
 }
 
-/* Optional: Add this if you want smoother font rendering during animations */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Adjust spacing for the email form container */
-#email-handler {
-  margin: auto 0; /* This will help center it vertically */
 }
