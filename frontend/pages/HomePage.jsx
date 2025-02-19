@@ -51,6 +51,8 @@ export const HomePage = () => {
   const toType = ["dreamcore.us", "@cutbythekid"];
   
   const writeLoop = async () => {
+    await sleep(3000);
+    
     let phraseIndex = 0;
     let sleepTime = 100;
     while (true) {
