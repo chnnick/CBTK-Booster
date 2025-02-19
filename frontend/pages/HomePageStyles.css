@@ -29,7 +29,8 @@ body {
 
   background: var(--bg-color);
   overflow: hidden;
-  padding: 5vh 0;
+  padding: 0;
+  min-height: 100vh; /* Ensure full viewport height */
 }
 
 .normal {
@@ -138,4 +139,9 @@ button:hover {
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Adjust spacing for the email form container */
+#email-handler {
+  margin: auto 0; /* This will help center it vertically */
 }
