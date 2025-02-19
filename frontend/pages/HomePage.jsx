@@ -97,7 +97,7 @@ export const HomePage = () => {
             htmlFor="user-email"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: .75 }}
+            transition={{ duration: 1, delay: .5 }}
           >
             your email:
           </motion.label>
@@ -109,14 +109,14 @@ export const HomePage = () => {
             onChange={(e) => setUser({ ...newUser, email: e.target.value})}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.5 }}
+            transition={{ duration: 1, delay: 1 }}
           />
           
           <motion.button 
             onClick={handleSubmit}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 2.25 }}
+            transition={{ duration: 1, delay: 1.5 }}
           >
             get notified
           </motion.button>
@@ -126,7 +126,7 @@ export const HomePage = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 1, delay: 2 }}
       >
         <Footer />
       </motion.div>
