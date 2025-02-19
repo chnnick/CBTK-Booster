@@ -93,9 +93,9 @@ export const HomePage = () => {
         <form id="email-form">
           <motion.label 
             htmlFor="user-email"
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: .75 }}
           >
             your email:
           </motion.label>
@@ -105,16 +105,16 @@ export const HomePage = () => {
             type="text" 
             value={newUser.email}
             onChange={(e) => setUser({ ...newUser, email: e.target.value})}
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.5 }}
           />
           
           <motion.button 
             onClick={handleSubmit}
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 2.25 }}
           >
             get notified
           </motion.button>
@@ -124,7 +124,7 @@ export const HomePage = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
       >
         <Footer />
       </motion.div>
