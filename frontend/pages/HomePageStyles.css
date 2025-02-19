@@ -105,6 +105,7 @@ input {
 button {
   color: var(--bg-color);
   background-color: var(--cursor-color);
+  transition: transform 0.2s ease;
 }
 
 button:hover {
@@ -126,4 +127,15 @@ button:hover {
     line-height: 4vh;
   }
   
+}
+
+#email-form {
+  position: relative;
+  overflow: hidden; /* Ensures sliding animations don't cause scrollbars */
+}
+
+/* Optional: Add this if you want smoother font rendering during animations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
