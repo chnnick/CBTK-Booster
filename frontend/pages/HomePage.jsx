@@ -83,7 +83,7 @@ export const HomePage = () => {
         id="header"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 1, delay: 3 }}
       >
         <span className={typewriterStyle} id="typewriter">{typewriterText}</span>
         <span id="cursor">|</span>
